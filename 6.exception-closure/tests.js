@@ -30,14 +30,14 @@ describe('Домашнее задание к лекции «Обработка �
         const triangle = new Triangle(2,5,5);
         expect(triangle).toBeDefined();
         expect(triangle.perimeter).toEqual(12);
-        expect(triangle.area).toEqual(4.899);
+        expect(parseFloat(triangle.area)).toEqual(4.899);
       });
   
       it('объект Triangle должен создаваться и правильно считаться периметр и прощадь №2', () => {
         const triangle = new Triangle(6,10,15);
         expect(triangle).toBeDefined();
         expect(triangle.perimeter).toEqual(31);
-        expect(triangle.area).toEqual(20.123);
+        expect(parseFloat(triangle.area)).toEqual(20.123);
       });
 
       it('объект Triangle не должен менять свойства периметра и площади', () => {
@@ -47,7 +47,7 @@ describe('Домашнее задание к лекции «Обработка �
         triangle.perimeter = "неправильное значение";
         triangle.area = "неправильное значение";
         expect(triangle.perimeter).toEqual(31);
-        expect(triangle.area).toEqual(20.123);
+        expect(parseFloat(triangle.area)).toEqual(20.123);
       });
   
       it('объект Triangle не должен создаваться №1', () => {
